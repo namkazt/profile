@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nam Nguyen - Chief Technology Officer | Technical Leader specializing in AI/LLM Solutions, Agentic Systems, and Distributed AI Architecture">
+    <title>Nam Nguyen - Chief Technology Officer</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #60a5fa;
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            font-size: 15px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Header/Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .title {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 8px;
+            opacity: 0.95;
+        }
+
+        .hero .subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.85;
+            max-width: 800px;
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 0;
+            min-height: 600px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar-section {
+            margin-bottom: 35px;
+        }
+
+        .sidebar-section h2 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .contact-item svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            flex-shrink: 0;
+            fill: var(--secondary-color);
+            margin-top: 2px;
+        }
+
+        .contact-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-color);
+        }
+
+        .skill-category {
+            margin-bottom: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: var(--text-medium);
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            transform: translateY(-1px);
+        }
+
+        .competency-list {
+            list-style: none;
+        }
+
+        .competency-list li {
+            padding: 8px 0;
+            font-size: 13px;
+            color: var(--text-medium);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .competency-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .language-level {
+            color: var(--text-light);
+            font-size: 12px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px 50px;
+        }
+
+        .content-section {
+            margin-bottom: 45px;
+        }
+
+        .content-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            position: relative;
+        }
+
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Executive Summary */
+        .executive-summary {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-medium);
+            padding: 25px;
+            background: var(--bg-light);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 35px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-title {
+            flex: 1;
+        }
+
+        .experience-title h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .experience-company {
+            font-size: 16px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .experience-location {
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .experience-date {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .experience-description {
+            margin-top: 12px;
+            line-height: 1.7;
+        }
+
+        .experience-description ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+            color: var(--text-medium);
+        }
+
+        .experience-description strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* Education */
+        .education-item {
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .education-degree {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .education-school {
+            font-size: 16px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .education-date {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .education-details {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        /* Projects */
+        .project-item {
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .project-item:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .project-role {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-link svg {
+            width: 14px;
+            height: 14px;
+            margin-left: 5px;
+        }
+
+        .project-description {
+            margin-top: 10px;
+            line-height: 1.6;
+            color: var(--text-medium);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-light);
+            padding: 30px 50px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Print Styles */
+        @page {
+            size: A4;
+            margin: 0.8cm 1cm;
+        }
+
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                background: white !important;
+                font-size: 9pt !important;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0;
+                padding: 0;
+            }
+
+            .hero {
+                padding: 20px 25px !important;
+                background: var(--primary-color) !important;
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+            }
+
+            .hero h1 {
+                font-size: 24pt !important;
+                margin-bottom: 8px !important;
+            }
+
+            .hero .title {
+                font-size: 14pt !important;
+                margin-bottom: 5px !important;
+            }
+
+            .hero .subtitle {
+                font-size: 10pt !important;
+            }
+
+            .main-layout {
+                display: grid !important;
+                grid-template-columns: 220px 1fr !important;
+                gap: 0 !important;
+                page-break-after: auto !important;
+            }
+
+            .sidebar {
+                padding: 12px 15px !important;
+                border-right: 1px solid var(--border-color) !important;
+                border-bottom: none !important;
+                background: var(--bg-light) !important;
+            }
+
+            .sidebar-section {
+                margin-bottom: 15px !important;
+                page-break-inside: avoid !important;
+            }
+
+            .sidebar-section h2 {
+                font-size: 9pt !important;
+                margin-bottom: 10px !important;
+            }
+
+            .contact-item {
+                font-size: 8pt !important;
+                margin-bottom: 6px !important;
+            }
+
+            .contact-item svg {
+                width: 14px !important;
+                height: 14px !important;
+            }
+
+            .skill-category {
+                margin-bottom: 12px !important;
+                page-break-inside: avoid !important;
+            }
+
+            .skill-category h3 {
+                font-size: 8pt !important;
+            }
+
+            .skill-tag {
+                font-size: 7pt !important;
+                padding: 2px 5px !important;
+            }
+
+            .competency-list li {
+                font-size: 8pt !important;
+                padding: 4px 0 !important;
+            }
+
+            .language-item {
+                font-size: 8pt !important;
+            }
+
+            .content {
+                padding: 12px 20px !important;
+            }
+
+            .content-section {
+                page-break-inside: auto !important;
+                margin-bottom: 15px !important;
+            }
+
+            .content-section h2 {
+                font-size: 14pt !important;
+                margin-bottom: 12px !important;
+                page-break-after: avoid !important;
+            }
+
+            .executive-summary {
+                font-size: 9pt !important;
+                padding: 12px !important;
+                line-height: 1.5 !important;
+            }
+
+            .experience-item {
+                page-break-inside: avoid !important;
+                margin-bottom: 15px !important;
+            }
+
+            .experience-item::before {
+                width: 8px !important;
+                height: 8px !important;
+            }
+
+            .experience-header {
+                margin-bottom: 6px !important;
+            }
+
+            .experience-title h3 {
+                font-size: 11pt !important;
+                margin-bottom: 3px !important;
+            }
+
+            .experience-company {
+                font-size: 10pt !important;
+            }
+
+            .experience-location {
+                font-size: 8pt !important;
+            }
+
+            .experience-date {
+                font-size: 8pt !important;
+            }
+
+            .experience-description {
+                font-size: 8pt !important;
+                line-height: 1.4 !important;
+                margin-top: 8px !important;
+            }
+
+            .experience-description ul {
+                margin-top: 6px !important;
+            }
+
+            .experience-description li {
+                font-size: 8pt !important;
+                margin-bottom: 5px !important;
+                line-height: 1.4 !important;
+            }
+
+            .education-item {
+                padding: 10px !important;
+                page-break-inside: avoid !important;
+            }
+
+            .education-degree {
+                font-size: 11pt !important;
+            }
+
+            .education-school {
+                font-size: 10pt !important;
+            }
+
+            .education-date {
+                font-size: 8pt !important;
+            }
+
+            .education-details {
+                font-size: 8pt !important;
+            }
+
+            .project-item {
+                padding: 10px !important;
+                margin-bottom: 10px !important;
+                page-break-inside: avoid !important;
+            }
+
+            .project-title {
+                font-size: 11pt !important;
+            }
+
+            .project-role {
+                font-size: 8pt !important;
+            }
+
+            .project-link {
+                font-size: 8pt !important;
+            }
+
+            .project-description {
+                font-size: 8pt !important;
+                line-height: 1.4 !important;
+            }
+
+            .project-item:hover {
+                transform: none !important;
+                box-shadow: none !important;
+            }
+
+            .skill-tag:hover {
+                transform: none !important;
+            }
+
+            a {
+                color: var(--text-dark) !important;
+                text-decoration: none !important;
+            }
+
+            .footer {
+                padding: 12px 20px !important;
+                font-size: 8pt !important;
+                page-break-before: auto !important;
+            }
+
+            /* Ensure animations don't interfere */
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            /* Prevent orphans and widows */
+            p, li, .experience-description {
+                orphans: 3 !important;
+                widows: 3 !important;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .hero {
+                padding: 40px 30px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero .title {
+                font-size: 18px;
+            }
+
+            .sidebar {
+                padding: 30px 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .experience-date {
+                white-space: normal;
+            }
+        }
+
+        /* Smooth Animations */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Accessibility */
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Nam Nguyen</h1>
+                <div class="title">Chief Technology Officer</div>
+                <div class="subtitle">Technical Leader | AI/LLM Solutions & Agentic Systems | Distributed AI Architecture</div>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Contact Information -->
+                <section class="sidebar-section">
+                    <h2>Contact</h2>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <div>
+                            <a href="dacnam.nguyen@seinetime.ai">dacnam.nguyen@seinetime.ai</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <div>Paris, France</div>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <div>
+                            <a href="https://github.com/namkazt" target="_blank" rel="noopener">github.com/namkazt</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        <div>
+                            <a href="https://twitter.com/namkazt" target="_blank" rel="noopener">@namkazt</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Core Competencies -->
+                <section class="sidebar-section">
+                    <h2>Core Competencies</h2>
+                    <ul class="competency-list">
+                        <li>Technical Leadership</li>
+                        <li>AI/LLM Architecture</li>
+                        <li>Agentic Systems Design</li>
+                        <li>Team Management</li>
+                        <li>Distributed AI Systems</li>
+                        <li>Scalable Infrastructure</li>
+                        <li>Agile Methodologies</li>
+                    </ul>
+                </section>
+
+                <!-- Technical Expertise -->
+                <section class="sidebar-section">
+                    <h2>Technical Expertise</h2>
+                    
+                    <div class="skill-category">
+                        <h3>AI/LLM Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agentic System Design</span>
+                            <span class="skill-tag">Multi-Agent Orchestration</span>
+                            <span class="skill-tag">LLM Integration</span>
+                            <span class="skill-tag">Vector Databases</span>
+                            <span class="skill-tag">Graph Databases</span>
+                            <span class="skill-tag">Knowledge Graphs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Backend & Systems</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Golang</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">C/C++</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Distributed Systems</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Event-Driven Architecture</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">Message Queuing</span>
+                            <span class="skill-tag">Data Streaming</span>
+                            <span class="skill-tag">Caching Strategies</span>
+                            <span class="skill-tag">High Availability</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frontend & Mobile</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Swift</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Methodologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Kanban</span>
+                            <span class="skill-tag">DevOps</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="sidebar-section">
+                    <h2>Languages</h2>
+                    <div class="language-item">
+                        <span class="language-name">Vietnamese</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <span class="language-level">Professional</span>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <!-- Executive Summary -->
+                <section class="content-section">
+                    <h2>Executive Summary</h2>
+                    <div class="executive-summary">
+                        Accomplished technology executive with 15+ years of progressive experience leading high-performance engineering teams and architecting enterprise-scale AI systems. Currently serving as CTO at Seinetime, specializing in Large Language Models (LLMs), agentic AI systems, and intelligent automation with proven expertise in building scalable distributed AI infrastructure. Track record of driving AI innovation from concept to production, including pioneering development of hierarchical thinking frameworks, multi-agent orchestration systems, and Model Context Protocol (MCP) integration. Deep technical expertise in Golang, AI/LLM integration (Anthropic, OpenAI, Google, Grok), distributed systems architecture (vector databases, graph databases, Kafka, PostgreSQL), and agent-to-agent communication protocols (tRPC). Demonstrated ability to align AI strategy with business transformation objectives while fostering cross-functional collaboration and team development.
+                    </div>
+                </section>
+
+                <!-- Professional Experience -->
+                <section class="content-section">
+                    <h2>Professional Experience</h2>
+
+                    <div class="experience-item fade-in">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Chief Technology Officer</h3>
+                                <div class="experience-company">Seinetime</div>
+                                <div class="experience-location">Paris, France</div>
+                            </div>
+                            <div class="experience-date">October 2023 - Present</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li><strong>Strategic Leadership:</strong> Spearheaded technical vision and architecture strategy for AI/ML solutions, specializing in Large Language Models (LLMs), agentic AI systems, and intelligent automation, aligning AI initiatives with business transformation objectives</li>
+                                <li><strong>AI Platform Development:</strong> Architected and led development of enterprise-scale agentic AI systems from inception, integrating multiple LLM providers (Anthropic, OpenAI, Google, Grok) and implementing sophisticated agent orchestration frameworks for autonomous task execution</li>
+                                <li><strong>Infrastructure Architecture:</strong> Designed and implemented highly scalable, fault-tolerant AI infrastructure leveraging Golang microservices architecture, vector databases (Qdrant, PostgreSQL with pgvector), graph databases (Memgraph), and distributed messaging systems (Kafka) for real-time AI agent communication and state management</li>
+                                <li><strong>Agentic System Innovation:</strong> Pioneered development of hierarchical and sequential thinking frameworks for AI agents, enabling complex multi-step reasoning, tool integration, and autonomous decision-making capabilities across distributed systems</li>
+                                <li><strong>Technology Stack Evolution:</strong> Established comprehensive AI/LLM technology stack including Model Context Protocol (MCP) integration, tRPC for agent-to-agent communication, task management systems with Redis and PostgreSQL backends, and real-time streaming capabilities for AI responses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item fade-in">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Acting Chief Technology Officer</h3>
+                                <div class="experience-company">AIACTIV / AICACTUS</div>
+                                <div class="experience-location">HCM, Vietnam</div>
+                            </div>
+                            <div class="experience-date">January 2020 - October 2023</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li><strong>Strategic Leadership:</strong> Spearheaded technical vision and architecture strategy for AdTech and Big Data solutions, aligning technology initiatives with business growth objectives across multiple product lines</li>
+                                <li><strong>Platform Development:</strong> Architected and led end-to-end development of Data Management Platform (DMP) from inception, successfully expanding scope to encompass Demand-Side Platform (DSP) and Ad Network capabilities, enabling company's market expansion</li>
+                                <li><strong>Infrastructure Architecture:</strong> Designed and implemented highly scalable, fault-tolerant distributed systems leveraging Golang microservices architecture, Aerospike for real-time data processing, Kafka for event streaming, and PostgreSQL for transactional consistency</li>
+                                <li><strong>Performance Optimization:</strong> Achieved 10x improvement in system throughput and sub-millisecond latency for high-volume ad serving through innovative caching strategies and distributed architecture patterns</li>
+                                <li><strong>Technology Stack Evolution:</strong> Led modernization of technology stack, establishing Golang as primary backend language and implementing DevOps practices that reduced deployment cycles from weeks to hours</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item fade-in">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Software Architect</h3>
+                                <div class="experience-company">Impala Intech Ltd.</div>
+                                <div class="experience-location">Vietnam, Bangladesh, India, Japan</div>
+                            </div>
+                            <div class="experience-date">May 2017 - January 2020</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li><strong>Technical Leadership:</strong> Led cross-functional development team of 4+ engineers, implementing Agile (Kanban) methodologies to deliver enterprise pharmaceutical solutions for Radiant Pharmaceuticals and Radiant Distribution Limited</li>
+                                <li><strong>System Architecture:</strong> Architected scalable, multi-tenant software systems with focus on security, compliance, and performance optimization for healthcare industry requirements</li>
+                                <li><strong>Technology Selection:</strong> Evaluated and selected optimal technology stacks based on project requirements, team capabilities, and long-term maintenance considerations, resulting in 30% reduction in technical debt</li>
+                                <li><strong>Cross-Regional Collaboration:</strong> Managed distributed team across multiple countries and time zones, establishing effective communication protocols and development workflows</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item fade-in">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Full-stack Developer</h3>
+                                <div class="experience-company">Impala Intech Ltd.</div>
+                                <div class="experience-location">Vietnam, Bangladesh, India, Japan</div>
+                            </div>
+                            <div class="experience-date">September 2014 - May 2017</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li><strong>Cross-Platform Development:</strong> Architected and developed comprehensive web, Android, and iOS applications for Tamemap, ensuring consistent user experience and code reusability across all platforms</li>
+                                <li><strong>Project Management:</strong> Managed end-to-end project delivery for Radiant Pharmaceuticals, leading development teams to successfully deliver production-ready applications across mobile and web platforms</li>
+                                <li><strong>Technical Innovation:</strong> Implemented modern development practices including automated testing, continuous integration, and responsive design principles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item fade-in">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Research & Development Engineer</h3>
+                                <div class="experience-company">VTV Cable</div>
+                                <div class="experience-location">Hanoi, Vietnam</div>
+                            </div>
+                            <div class="experience-date">April 2013 - May 2014</div>
+                        </div>
+                        <div class="experience-description">
+                            Architected and implemented Video on Demand (VOD) services, collaborating with cross-functional teams to enhance TVBox product capabilities and improve user experience across cable television platform.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="content-section">
+                    <h2>Education</h2>
+                    <div class="education-item fade-in">
+                        <div class="education-header">
+                            <div>
+                                <div class="education-degree">Software Engineer</div>
+                                <div class="education-school">NIIT</div>
+                            </div>
+                            <div class="education-date">September 2009 - June 2011</div>
+                        </div>
+                        <div class="education-details">
+                            <strong>GPA:</strong> 4.0/4.0<br>
+                            <strong>Relevant Coursework:</strong> Computational Theory, Operating Systems, Compilers, Software Development, Microprocessors, Intelligent Machines (Perception, Learning, and Uncertainty), Design of Usable Interactive Systems, Computer Networks
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notable Projects -->
+                <section class="content-section">
+                    <h2>Notable Open Source Contributions</h2>
+                    
+                    <div class="project-item fade-in">
+                        <div class="project-header">
+                            <div class="project-title">Pinbox - 3DS Remote Desktop</div>
+                            <div class="project-role">Maintainer</div>
+                        </div>
+                        <a href="https://github.com/namkazt/PinBox" class="project-link" target="_blank" rel="noopener">
+                            github.com/namkazt/PinBox
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                        </a>
+                        <div class="project-description">
+                            Developed and maintain open-source homebrew application for Nintendo 3DS enabling real-time content streaming from Windows PCs. Implemented in C, achieving 60 FPS video streaming performance that exceeds native hardware capabilities. Demonstrates expertise in low-level systems programming, video codec optimization, and embedded systems development.
+                        </div>
+                    </div>
+
+                    <div class="project-item fade-in">
+                        <div class="project-header">
+                            <div class="project-title">Yuzu Emulator</div>
+                            <div class="project-role">Contributor</div>
+                        </div>
+                        <a href="https://github.com/yuzu-emu/yuzu/issues?q=author%3Anamkazt" class="project-link" target="_blank" rel="noopener">
+                            github.com/yuzu-emu/yuzu
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                        </a>
+                        <div class="project-description">
+                            Contributed to leading open-source Nintendo Switch emulator, collaborating with international development community to enhance emulation accuracy and performance. Involvement demonstrates commitment to technical excellence and open-source community engagement.
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p><strong>References available upon request</strong></p>
+            <p style="margin-top: 10px; font-size: 13px;">© 2026 Nam Nguyen. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll animations on load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to sections as they appear
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+
+            // Add subtle hover effect to skill tags
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'rgba(59, 130, 246, 0.05)';
+                });
+                tag.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = 'var(--bg-white)';
+                });
+            });
+
+            // Print button functionality (optional)
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    e.preventDefault();
+                    window.print();
+                }
+            });
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading animation complete class
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+        });
+
+        // Respect user's motion preferences
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
